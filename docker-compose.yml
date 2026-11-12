@@ -1,0 +1,8 @@
+services:
+  autoservice:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data   # база SQLite сохраняется на вашем диске
+    restart: unless-stopped
